@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Registration</title>
+<style>
+    body {
+        font-family: Tahoma, sans-serif;
+        background-color: #f9f9f9;
+        margin: 0;
+        padding: 20px;
+    }
+    h2 {
+        text-align: center;
+    }
+    form {
+        background: #fff;
+        max-width: 600px;
+        margin: auto;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    label {
+        display: block;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+    input, select, textarea {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    fieldset {
+        margin-top: 10px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    .buttons {
+        margin-top: 15px;
+        text-align: center;
+    }
+    .buttons input {
+        width: 100px;
+        margin: 5px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+
+<h2>Registration Form</h2>
+
+<form action="thankyou.html" method="get" enctype="multipart/form-data">
+
+    <label for="fname">First Name *</label>
+    <input type="text" id="fname" name="fname" required>
+
+    <label for="lname">Last Name *</label>
+    <input type="text" id="lname" name="lname" required>
+
+    <label for="email">Email *</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="password">Password *</label>
+    <input type="password" id="password" name="password" required>
+
+    <label for="repeat_password">Repeat Password *</label>
+    <input type="password" id="repeat_password" name="repeat_password" required>
+
+    <label for="birthdate">Birth Date</label>
+    <input type="date" id="birthdate" name="birthdate">
+
+    <label for="picture">User Picture</label>
+    <input type="file" id="picture" name="picture">
+
+    <fieldset>
+        <legend>Gender</legend>
+        <input type="radio" id="male" name="gender" value="Male"> Male
+        <input type="radio" id="female" name="gender" value="Female"> Female
+    </fieldset>
+
+    <label for="faculty">Faculty</label>
+    <select id="faculty" name="faculty">
+        <option value=""selected disabled >--choose your faculty --</option>
+        <option value="cs">Computer Science</option>
+        <option value="eng">Engineering</option>
+        <option value="med">Medicine</option>
+        <option value="art">Arts</option>
+    </select>
+
+    <fieldset>
+        <legend>Interests</legend>
+        <input type="checkbox" name="interests" value="Programming"> Programming
+        <input type="checkbox" name="interests" value="Reading"> Reading
+        <input type="checkbox" name="interests" value="Swimming"> Swimming
+    </fieldset>
+
+    <label for="about">About You</label>
+    <textarea id="about" name="about" rows="4"></textarea>
+
+    <input type="checkbox" name="terms" required> I agree to the terms and conditions
+
+    <div class="buttons">
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </div>
+
+</form>
+
+</body>
+</html>

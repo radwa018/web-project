@@ -3,68 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>home page</title>
+    <title>Home Page</title>
     <style>
         body {
             font-family: Tahoma, sans-serif;
             margin: 0;
-            padding: 20px;
+            padding: 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
         }
         header {
+            background-color: #eee;
             text-align: center;
+            padding: 10px;
             font-size: 2em;
             font-weight: bold;
         }
-        .container {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 20px;
-        }
-        .info {
-            width: 45%;
-        }
-        .photo {
-            width: 45%;
-            text-align: right;
-        }
-        img {
-            max-width: 200px;
-            border-radius: 10px;
-        }
-        .about {
-            margin-top: 20px;
-            height: 300px;
-            overflow-y: scroll;
-            border: 1px solid #ccc;
+        nav {
+            background-color: #ddd;
+            text-align: center;
             padding: 10px;
         }
-        hr {
-            margin: 20px 0;
-        }
-        .nav-links {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .nav-links a {
-            margin: 0 10px;
+        nav a {
+            margin: 0 15px;
             text-decoration: none;
             color: blue;
         }
+        td {
+            vertical-align: top;
+            padding: 15px;
+            border: 1px solid #ccc;
+        }
         footer {
             text-align: center;
-            margin-top: 20px;
+            background-color: #eee;
+            padding: 10px;
         }
-        footer img {
-            width: 30px;
-            margin: 0 5px;
+        .login-box {
+            border: 1px solid #ccc;
+            padding: 15px;
+            background-color: #f9f9f9;
+            margin-bottom: 20px;
         }
-        .to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
+        .login-box h3 {
+            margin-top: 0;
         }
-        .to-top img {
-            width: 40px;
+        .login-box input[type="text"],
+        .login-box input[type="password"] {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        .personal-photo img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        ul {
+            padding-left: 20px;
         }
     </style>
 </head>
@@ -72,59 +69,108 @@
 
 <header>Radwa Mohamed</header>
 
-<div class="container">
-    <div class="info">
-        <h3>personal info</h3>
-        <ul>
-            <li>age :21</li>
-            <li>location :egypt</li>
-            <li>phone number
-                               <ul>
-                    <li>+201069601316</li>
-                  
+<nav>
+    <a href="Home.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact Me</a>
+</nav>
+
+<table>
+    <tr>
+        <!-- Left Column -->
+        <td width="25%">
+           <!-- Login Box -->
+            <div class="login-box">
+                <h3>Login</h3>
+                <form action="Home.html" method="post">
+                    <label for="username">Username:</label><br>
+                    <input type="text" id="username" name="username" required><br>
+
+                    <label for="password">Password:</label><br>
+                    <input type="password" id="password" name="password" required><br>
+
+                 <!-- Login Image Button -->
+                    <input type="image" src="resources/login.png" alt="Login" width="100" style="margin-right:10px;">
+
+                    <!-- Registration Image Button -->
+                    <a href="registration.html">
+                        <img src="resources/register.png" alt="Register" width="100" style="margin-right:10px;">
+                    </a>
+
+                </form>
+            </div>
+ 
+            <!-- My Pages Online -->
+            <h3>My Pages Online</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 10px;">
+                        <a href="https://facebook.com/radwashaweeir" target="_blank">
+                            <img src="resources/facebook.png" alt="Facebook" width="32" height="32">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://linkedin.com/in/radwashaweeir" target="_blank">
+                            <img src="resources/linkedin.png" alt="LinkedIn" width="32" height="32">
+                        </a>
+                    </li>
                 </ul>
-            </li>
-            <li>Faculty <a href="http://education.fcih.helwan.edu.eg/portal/" target="_blank">faculty website</a></li>
-            <li>graduation year:2026</li>
-            <li>hobbies
-                <ul>
-                    <li>programming</li>
-                    <li>coding</li>
-                </ul>
-            </li>
-            <li><a href="radwa8470@email.com">send email address</a></li>
-        </ul>
-    </div>
-    <div class="photo">
-        <img src="resources/personal.jpg" alt="photo" width="250" style="border: 2px solid #ccc; border-radius: 10px;">
-    </div>
-</div>
 
 
-<div class="about">
-    <h3>about me</h3>
-    <p>
-      a 4th computer science student in helwan university cairo
-    </p>
-</div>
+            <!-- Video -->
+            <h3>Video</h3>
+            <iframe width="100%" height="200" 
+                    src="https://www.youtube.com/embed/mKT4o4y9xmI" 
+                    frameborder="0" 
+                    allowfullscreen>
+            </iframe>            
 
-<hr>
+        <!-- Middle Column -->
+        <td width="50%">
+            <h3>Personal Info</h3>
+            <ul>
+                <li>Age: 21</li>
+                <li>Location: Egypt</li>
+                <li>Phone Number:
+                    <ul>
+                        <li>+201069601316</li>
+                    </ul>
+                </li>
+                <li>Faculty: <a href="http://education.fcih.helwan.edu.eg/portal/" target="_blank">Faculty Website</a></li>
+                <li>Graduation Year: 2026</li>
+                <li>Hobbies:
+                    <ul>
+                        <li>Programming</li>
+                        <li>Coding</li>
+                    </ul>
+                </li>
+                <li><a href="mailto:radwa8470@email.com">Send Email</a></li>
+            </ul>
 
-<div class="nav-links">
-    <a href="Home.html">home</a> |
-    <a href="about.html">about</a> |
-    <a href="contact.html">contact me</a>
-</div>
+            <h3>About Me</h3>
+            <p>
+                I am a 4th-year computer science student at Helwan University, Cairo.
+                I enjoy programming, coding, and learning new technologies...
+            </p>
+        </td>
+
+        <!-- Right Column -->
+        <td width="25%">
+            <div class="personal-photo">
+                <h3>Personal Photo</h3>
+                <img src="resources/personal.jpg" alt="My Photo">
+            </div>
+
+            <h3>News</h3>
+            <p>Latest updates and news will be shown here...</p>
+        </td>
+    </tr>
+</table>
 
 <footer>
-    <a href="https://facebook.com/radwashaweeir" target="_blank"><img src="resources/facebook.png" alt="Facebook"></a>
-    <a href="https://linkdin.com/radwashaweeir" target="_blank"><img src="resources/linkdin.webp" alt="linkdin"></a>
-    <p>Copyrights © are reserved to ITI.</p>
+    <a href="#top">Top of Page</a> |
+    Copyrights © are reserved to ITI.
 </footer>
-
-<div class="to-top">
-    <a href="#top"><img src="resources/up-arrow.png" alt="to the top"></a>
-</div>
 
 </body>
 </html>
+
