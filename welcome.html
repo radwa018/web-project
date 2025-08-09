@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>welcome</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Tahoma, sans-serif;
+            background-image: url('resources/images/background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+            color: rgb(23, 43, 79);
+            margin-top: 50px;
+        }
+        h2 {
+            color: rgb(123, 175, 193);
+        }
+        .video-container {
+            margin-top: 20px;
+        }
+        .skip-link {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0,0,0,0.6);
+            padding: 10px 20px;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .skip-link:hover {
+            background: rgba(169, 154, 154, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>welcome to my website</h1>
+    <h2>Radwa Mohamed</h2>
+    <div>
+        <img src="resources/photo.jpg" alt="Welcome" width="400">
+    </div>
+    <div class="video-container">
+        <video width="500" controls>
+            <source src="resources/welcome video.mp4" type="video/mp4">
+            null
+        </video>
+    </div>
+
+    <a href="Home.html" class="skip-link">skip intro</a>
+
+</body>
+</html>
